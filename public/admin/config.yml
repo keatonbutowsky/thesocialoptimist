@@ -6,10 +6,10 @@ backend:
   name: github
   repo: keatonbutowsky/thesocialoptimist
   branch: main
-  # Free OAuth bridge for public repos so we don't have to host our own.
-  # If sign-in fails, swap base_url to https://decapbridge.com after registering
-  # the site at decapbridge.com.
-  base_url: https://auth.sveltia.app
+  # Free OAuth bridge for public repos (one-time signup at decapbridge.com
+  # is required — see public/admin/SETUP.md). Sveltia CMS is fully
+  # compatible with Decap Bridge.
+  base_url: https://decapbridge.com
 
 site_url: https://thesocialoptimist.com
 display_url: https://thesocialoptimist.com
