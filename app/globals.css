@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --pink-cherub: #fab6c4;
+    --cloud-cotton: #fffde9;
+    --dark-brown: #2a2422;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cloud-cotton text-dark-brown font-body antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  ::selection {
+    background-color: #fab6c4;
+    color: #2a2422;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .tso-container {
+    @apply mx-auto w-full max-w-6xl px-6 sm:px-8;
+  }
+
+  .tso-eyebrow {
+    @apply text-xs uppercase tracking-widest2 text-dark-brown/60 font-body;
+  }
+
+  .tso-btn-primary {
+    @apply inline-flex items-center gap-2 rounded-badge bg-dark-brown px-6 py-3 text-sm font-medium text-cloud-cotton transition hover:bg-pink-cherub hover:text-dark-brown;
+  }
+
+  .tso-btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-badge border border-dark-brown/20 px-6 py-3 text-sm font-medium text-dark-brown transition hover:border-dark-brown hover:bg-dark-brown hover:text-cloud-cotton;
+  }
+
+  .tso-link {
+    @apply underline decoration-pink-cherub decoration-2 underline-offset-4 transition hover:decoration-dark-brown;
+  }
+
+  .tso-card {
+    @apply rounded-3xl border border-dark-brown/10 bg-cloud-cotton p-6 transition hover:border-dark-brown/30;
+  }
+}
