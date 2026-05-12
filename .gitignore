@@ -6,3 +6,6 @@ out
 *.log
 .vercel
 *.tsbuildinfo
+
+# raw .MOV source files — converted .mp4s live in public/videos/
+*.MOV

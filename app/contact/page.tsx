@@ -4,13 +4,13 @@ export default function ContactPage() {
   return (
     <>
       <section className="bg-cloud-cotton">
-        <div className="tso-container py-24 grid gap-16 md:grid-cols-[1fr_1fr]">
+        <div className="tso-container py-14 grid gap-10 md:grid-cols-[1fr_1fr] md:gap-16 md:py-24">
           <div>
             <p className="tso-eyebrow">say hi</p>
-            <h1 className="mt-4 font-display text-5xl md:text-6xl tracking-wider2">
+            <h1 className="mt-4 font-display text-4xl leading-tight tracking-wider2 sm:text-5xl md:text-6xl">
               Let&apos;s talk strategy.
             </h1>
-            <p className="mt-6 max-w-prose2 text-lg text-dark-brown/80">
+            <p className="mt-6 max-w-prose2 text-base text-dark-brown/80 sm:text-lg">
               Fill out the form and we&apos;ll get back within two business days
               with availability for a 30-minute discovery call. We work best
               with profitable, growth-minded brands ready to invest in their
@@ -36,7 +36,7 @@ export default function ContactPage() {
                   type="text"
                   name="name"
                   required
-                  className="rounded-full border border-dark-brown/15 bg-cloud-cotton px-4 py-3 focus:border-dark-brown focus:outline-none"
+                  className="rounded-full border border-dark-brown/15 bg-cloud-cotton px-4 py-3.5 min-h-[44px] focus:border-dark-brown focus:outline-none"
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm">
@@ -45,7 +45,7 @@ export default function ContactPage() {
                   type="email"
                   name="email"
                   required
-                  className="rounded-full border border-dark-brown/15 bg-cloud-cotton px-4 py-3 focus:border-dark-brown focus:outline-none"
+                  className="rounded-full border border-dark-brown/15 bg-cloud-cotton px-4 py-3.5 min-h-[44px] focus:border-dark-brown focus:outline-none"
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm">
@@ -53,14 +53,14 @@ export default function ContactPage() {
                 <input
                   type="text"
                   name="brand"
-                  className="rounded-full border border-dark-brown/15 bg-cloud-cotton px-4 py-3 focus:border-dark-brown focus:outline-none"
+                  className="rounded-full border border-dark-brown/15 bg-cloud-cotton px-4 py-3.5 min-h-[44px] focus:border-dark-brown focus:outline-none"
                 />
               </label>
               <label className="flex flex-col gap-2 text-sm">
                 <span className="tso-eyebrow">Budget range</span>
                 <select
                   name="budget"
-                  className="rounded-full border border-dark-brown/15 bg-cloud-cotton px-4 py-3 focus:border-dark-brown focus:outline-none"
+                  className="rounded-full border border-dark-brown/15 bg-cloud-cotton px-4 py-3.5 min-h-[44px] focus:border-dark-brown focus:outline-none"
                 >
                   <option>$2,000 / mo (Starter)</option>
                   <option>$3,500 / mo (Savvy)</option>
@@ -73,7 +73,7 @@ export default function ContactPage() {
                 <textarea
                   name="message"
                   rows={4}
-                  className="rounded-3xl border border-dark-brown/15 bg-cloud-cotton px-4 py-3 focus:border-dark-brown focus:outline-none"
+                  className="rounded-3xl border border-dark-brown/15 bg-cloud-cotton px-4 py-3.5 min-h-[44px] focus:border-dark-brown focus:outline-none"
                 />
               </label>
               <button type="submit" className="tso-btn-primary justify-center">

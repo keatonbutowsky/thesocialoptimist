@@ -1,6 +1,6 @@
 # The Social Optimist — website
 
-Next.js 15 + Tailwind + MDX. Hosted free on Vercel from this repo.
+Next.js 15 + Tailwind. Hosted free on Vercel from this repo.
 
 ## Local dev
 
@@ -11,33 +11,19 @@ npm run dev
 
 Open http://localhost:3000.
 
-## Adding a case study
+## Adding a video to /portfolio
 
-Create a new file in `content/portfolio/your-client-slug.mdx`:
+Content for the portfolio lives in `content/gallery.json` and `public/videos/`.
+The full non-technical workflow (drop an `.mp4`, edit a JSON block, commit)
+is documented in [`public/videos/_MEGAN_README.md`](public/videos/_MEGAN_README.md).
 
-```mdx
----
-client: "Client Name"
-industry: "Lifestyle"            # one of: Lifestyle, F&B, Wellness, etc.
-platforms: ["Instagram", "TikTok"]
-service_tier: "Social Savvy"     # Social Starter | Social Savvy | Social Optimist
-result_type: "Growth"            # Growth | Launch | Community
-hero_metric: "+312% reach in 90 days"
-summary: "One-sentence pitch shown on the portfolio grid."
-date: "2026-05-01"
----
+Source `.MOV` files can be transcoded to web-safe `.mp4` with the helper script:
 
-## The challenge
-...
-
-## The strategy
-...
-
-## The result
-...
+```powershell
+pwsh scripts/transcode-videos.ps1
 ```
 
-Commit + push to `main` and Vercel auto-deploys in ~30 seconds. No CMS required.
+Requires ffmpeg (`winget install Gyan.FFmpeg`).
 
 ## Brand tokens
 

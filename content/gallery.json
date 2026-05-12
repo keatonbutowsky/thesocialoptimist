@@ -1,0 +1,83 @@
+{
+  "_comment": "Edit this file to add, remove, retag, or reorder portfolio videos. See public/videos/_MEGAN_README.md for the full how-to. Allowed sections are listed below. Allowed platforms: Instagram, TikTok. Allowed aspect: 9:16, 1:1, 16:9 (default 9:16).",
+
+  "sections": [
+    "Wedding",
+    "Lifestyle",
+    "TikTok UGC",
+    "Instagram Reels"
+  ],
+
+  "items": [
+    {
+      "section": "Wedding",
+      "clientType": "Wedding",
+      "contentType": "Teaser Content",
+      "platform": "Instagram",
+      "src": "/videos/wedding-fall-in-love.mp4"
+    },
+    {
+      "section": "Wedding",
+      "clientType": "Wedding",
+      "contentType": "Recap Reel",
+      "platform": "Instagram",
+      "src": "/videos/wedding-l-and-r.mp4"
+    },
+    {
+      "section": "Wedding",
+      "clientType": "Wedding",
+      "contentType": "Rehearsal Dinner",
+      "platform": "Instagram",
+      "src": "/videos/wedding-rehearsal-dinner.mp4"
+    },
+    {
+      "section": "Wedding",
+      "clientType": "Wedding",
+      "contentType": "Bridal Party",
+      "platform": "Instagram",
+      "src": "/videos/wedding-the-girls.mp4"
+    },
+    {
+      "section": "TikTok UGC",
+      "clientType": "Local Brand",
+      "contentType": "UGC Content",
+      "platform": "TikTok",
+      "src": "/videos/ugc-01.mp4"
+    },
+    {
+      "section": "TikTok UGC",
+      "clientType": "Local Brand",
+      "contentType": "UGC Content",
+      "platform": "TikTok",
+      "src": "/videos/ugc-02.mp4"
+    },
+    {
+      "section": "TikTok UGC",
+      "clientType": "Local Brand",
+      "contentType": "UGC Content",
+      "platform": "TikTok",
+      "src": "/videos/ugc-03.mp4"
+    },
+    {
+      "section": "TikTok UGC",
+      "clientType": "Local Brand",
+      "contentType": "UGC Content",
+      "platform": "TikTok",
+      "src": "/videos/ugc-04.mp4"
+    },
+    {
+      "section": "TikTok UGC",
+      "clientType": "Local Brand",
+      "contentType": "UGC Content",
+      "platform": "TikTok",
+      "src": "/videos/ugc-05.mp4"
+    },
+    {
+      "section": "TikTok UGC",
+      "clientType": "Local Brand",
+      "contentType": "UGC Content",
+      "platform": "TikTok",
+      "src": "/videos/ugc-06.mp4"
+    }
+  ]
+}
