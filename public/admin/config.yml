@@ -1,0 +1,92 @@
+# Sveltia CMS configuration for The Social Optimist portfolio.
+# Edits made through /admin commit directly to GitHub and trigger a Vercel deploy.
+# Docs: https://github.com/sveltia/sveltia-cms
+
+backend:
+  name: github
+  repo: keatonbutowsky/thesocialoptimist
+  branch: main
+  # Free OAuth bridge for public repos so we don't have to host our own.
+  # If sign-in fails, swap base_url to https://decapbridge.com after registering
+  # the site at decapbridge.com.
+  base_url: https://auth.sveltia.app
+
+site_url: https://thesocialoptimist.com
+display_url: https://thesocialoptimist.com
+logo_url: /brand/monogram-pink-stamp.svg
+
+media_folder: public/videos
+public_folder: /videos
+
+collections:
+  - name: gallery
+    label: Portfolio
+    label_singular: Gallery
+    delete: false
+    files:
+      - file: content/gallery.json
+        label: Portfolio Videos
+        name: gallery
+        description: >-
+          Add, edit, reorder, or remove videos shown on the /portfolio page.
+          Drag rows to reorder. Click "Save & Publish" when done — the live
+          site updates in about 30 seconds.
+        fields:
+          - name: sections
+            label: Section categories
+            label_singular: Section name
+            hint: >-
+              These are the filter buttons that appear above the video grid.
+              Add or rename categories here, then assign videos to them below.
+            widget: list
+            min: 1
+            field:
+              { name: name, label: Name, widget: string }
+
+          - name: items
+            label: Videos
+            label_singular: Video
+            widget: list
+            summary: "{{fields.clientType}} — {{fields.contentType}}"
+            fields:
+              - name: section
+                label: Section
+                widget: string
+                hint: Must match one of the section names above (e.g. "Wedding").
+
+              - name: clientType
+                label: Top label
+                widget: string
+                hint: 'The first line shown under the video, e.g. "Wedding".'
+
+              - name: contentType
+                label: Bottom label
+                widget: string
+                hint: 'The second line shown under the video, e.g. "Recap Reel".'
+
+              - name: platform
+                label: Platform
+                widget: select
+                options: ["Instagram", "TikTok"]
+                default: Instagram
+
+              - name: src
+                label: Video file
+                widget: file
+                media_library:
+                  config:
+                    multiple: false
+                hint: Upload a new .mp4 here or pick one already in /public/videos.
+
+              - name: poster
+                label: Poster image (optional)
+                widget: image
+                required: false
+                hint: A thumbnail shown before the video plays.
+
+              - name: aspect
+                label: Aspect ratio (optional)
+                widget: select
+                options: ["9:16", "1:1", "16:9"]
+                default: "9:16"
+                required: false

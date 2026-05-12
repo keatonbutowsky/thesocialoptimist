@@ -1,5 +1,13 @@
 # How to add, change, or remove a portfolio video
 
+**The easy way:** go to **https://thesocialoptimist.com/admin**, sign in with your GitHub account, and use the visual editor. You can add videos, change labels, reorder things, drag-and-drop new .mp4 files, and hit "Save & Publish". The live site updates in about 30 seconds.
+
+The instructions below are the backup path if you ever need to edit the file directly. Both methods do the same thing — the visual editor just hides the JSON.
+
+---
+
+## Backup: editing manually
+
 You can do all of this from your laptop in Notepad, or right in the GitHub website. No coding needed.
 
 ## To add a new video
