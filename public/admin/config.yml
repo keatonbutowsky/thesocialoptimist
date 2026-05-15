@@ -32,7 +32,7 @@ commit_messages:
 
 site_url: https://thesocialoptimist.com
 display_url: https://thesocialoptimist.com
-logo_url: /brand/monogram-pink-stamp.svg
+logo_url: /brand/tso-wordmark.svg
 
 media_folder: public/videos
 public_folder: /videos
@@ -47,16 +47,15 @@ collections:
         label: Portfolio Videos
         name: gallery
         description: >-
-          Add, edit, reorder, or remove videos shown on the /portfolio page.
-          Drag rows to reorder. Click "Save & Publish" when done — the live
-          site updates in about 30 seconds.
+          Edit your portfolio here. Changes go live in about 30 seconds after
+          you click "Save & Publish".
         fields:
           - name: sections
-            label: Section categories
-            label_singular: Section name
+            label: Category pages
+            label_singular: Category name
             hint: >-
-              These are the filter buttons that appear above the video grid.
-              Add or rename categories here, then assign videos to them below.
+              Each name here becomes a page at /portfolio/<name>. Add a new
+              name to create a new category page on the site.
             widget: list
             min: 1
             field:
@@ -66,22 +65,24 @@ collections:
             label: Videos
             label_singular: Video
             widget: list
-            summary: "{{fields.clientType}} — {{fields.contentType}}"
+            summary: "{{fields.clientType}} · {{fields.contentType}}  [{{fields.section}}]"
             fields:
               - name: section
-                label: Section
+                label: Which category page
                 widget: string
-                hint: Must match one of the section names above (e.g. "Wedding").
+                hint: >-
+                  Must exactly match a name in "Category pages" above
+                  (case-sensitive).
 
               - name: clientType
-                label: Top label
+                label: Top label (brand / client name)
                 widget: string
                 hint: 'The first line shown under the video, e.g. "Wedding".'
 
               - name: contentType
-                label: Bottom label
+                label: Bottom label (content type)
                 widget: string
-                hint: 'The second line shown under the video, e.g. "Recap Reel".'
+                hint: 'Examples: "UGC", "Recap Reel", "Founder POV"'
 
               - name: platform
                 label: Platform
@@ -90,7 +91,7 @@ collections:
                 default: Instagram
 
               - name: src
-                label: Video file
+                label: Video file (.mp4)
                 widget: file
                 media_library:
                   config:
@@ -101,7 +102,9 @@ collections:
                 label: Poster image (optional)
                 widget: image
                 required: false
-                hint: A thumbnail shown before the video plays.
+                hint: >-
+                  A thumbnail (.jpg) shown before the video plays. Recommended:
+                  1080×1920 for vertical clips.
 
               - name: aspect
                 label: Aspect ratio (optional)

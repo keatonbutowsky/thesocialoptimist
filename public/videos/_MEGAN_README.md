@@ -1,8 +1,8 @@
 # How to add, change, or remove a portfolio video
 
-**The easy way:** go to **https://thesocialoptimist.com/admin**, sign in with your GitHub account, and use the visual editor. You can add videos, change labels, reorder things, drag-and-drop new .mp4 files, and hit "Save & Publish". The live site updates in about 30 seconds.
-
-The instructions below are the backup path if you ever need to edit the file directly. Both methods do the same thing — the visual editor just hides the JSON.
+> 👉 **The main guide for Megan is now at `MEGAN_GUIDE.md` in the repo root.** It covers signing in, editing, adding videos, and adding new category pages — everything from the visual editor at [/admin](https://thesocialoptimist.com/admin). Start there.
+>
+> This file is kept as a backup reference for the direct-file editing path only, in case the CMS is ever down.
 
 ---
 
