@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s · The Social Optimist",
   },
   description:
-    "Dallas-based social media strategy & management for profitable, growth-minded brands. Authentic growth via community, psychology, and creativity.",
+    "A Dallas-based creative agency focusing on brand strategy and social media exposure for growth-minded businesses nationwide.",
   openGraph: {
     title: "The Social Optimist",
     description:

@@ -24,15 +24,10 @@ export default function Nav() {
           aria-label="The Social Optimist home"
         >
           <img
-            src="/brand/avatar-pink-tso.svg"
-            alt=""
-            width={40}
-            height={40}
-            className="h-10 w-10 rounded-full"
+            src="/brand/tso-logo.svg"
+            alt="The Social Optimist"
+            className="h-12 w-auto md:h-14"
           />
-          <span className="font-display text-base tracking-wider2 hidden sm:inline">
-            the social optimist
-          </span>
         </Link>
 
         {/* Desktop nav */}

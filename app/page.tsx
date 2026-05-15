@@ -16,9 +16,10 @@ export default function HomePage() {
               <span className="italic text-dark-brown">social</span> optimizers.
             </h1>
             <p className="mt-6 max-w-prose2 text-base text-dark-brown/80 sm:text-lg md:mt-8">
-              Social media strategy & management for profitable, growth-minded
-              brands. We trade algorithm anxiety for authentic growth — through
-              community, psychology, and a whole lot of creativity.
+              We&apos;re a creative agency with one goal: breaking sales goals
+              and driving ROI through social media exposure, SEO management,
+              and brand strategy. Gained exposure, increased brand love, and
+              an online obsession with your brand.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 md:mt-10">
               <Link href="/contact" className="tso-btn-primary">Book a discovery call</Link>
@@ -41,21 +42,24 @@ export default function HomePage() {
       <section className="tso-container py-16 md:py-24">
         <div className="grid gap-10 md:grid-cols-[1fr_1fr] md:items-center md:gap-12">
           <div>
-            <p className="tso-eyebrow">what we believe</p>
+            <p className="tso-eyebrow">meet our founder</p>
             <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
-              Less time questioning. More time creating.
+              Meet Megan, our founder.
             </h2>
             <div className="mt-5 space-y-5 text-base text-dark-brown/80 sm:text-lg md:mt-6">
               <p>
-                Social media can be powerful when it&apos;s built on connection
-                instead of manipulation. We work with founders who want to grow
-                the right way — culturally aware, creatively brave, and rooted
-                in community.
+                She wants people to be just as obsessed with your brand as you
+                are. Social media has become repetitive — everyone chasing the
+                same trends, sounding the same. At The Social Optimist we
+                celebrate what makes your brand individual and help you find
+                your audience organically.
               </p>
               <p>
-                The optimist&apos;s edge: psychology, AI, and a trend-starter
-                mindset, pointed at the platforms your audience actually lives
-                on.
+                Trend chasers follow. We start the trends.
+              </p>
+              <p className="border-l-2 border-dark-brown/30 pl-4 text-base italic text-dark-brown/75">
+                <span className="font-display not-italic">Creative optimist</span>{" "}
+                <span className="not-italic text-dark-brown/55">(noun)</span> — someone who, rather than just expecting a good outcome, actively constructs it by viewing challenges as opportunities to design better solutions.
               </p>
             </div>
           </div>
@@ -89,7 +93,7 @@ export default function HomePage() {
             {[
               { name: "Social Starter", price: "$2,000", note: "12 posts · 2 platforms · community engagement" },
               { name: "Social Savvy", price: "$3,500", note: "20 posts · unlimited platforms · paid + SEO" },
-              { name: "Social Optimist", price: "$5,000", note: "Full creative team · content shoot included" },
+              { name: "Social Optimist", price: "$5,000", note: "Full creative suite · content shoot included" },
             ].map((t) => (
               <div key={t.name} className="tso-card flex flex-col">
                 <p className="tso-eyebrow">{t.name}</p>
