@@ -1,13 +1,12 @@
 {
   "_comment": "Edit this file to add, remove, retag, or reorder portfolio videos. Sections become category pages at /portfolio/<slug> automatically. Allowed platforms: Instagram, TikTok. Allowed aspect: 9:16, 1:1, 16:9 (default 9:16). Megan can also edit at /admin.",
-
   "sections": [
     "Restaurants",
     "Med Spa",
     "Hospitality",
-    "Live Events"
+    "Live Events",
+    "CPG Brands"
   ],
-
   "items": [
     {
       "section": "Live Events",
@@ -38,10 +37,10 @@
       "src": "/videos/wedding-the-girls.mp4"
     },
     {
-      "section": "Restaurants",
-      "clientType": "Local Brand",
+      "section": "CPG Brand",
+      "clientType": "Q-Tips",
       "contentType": "UGC",
-      "platform": "TikTok",
+      "platform": "Instagram",
       "src": "/videos/ugc-01.mp4"
     },
     {
