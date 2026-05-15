@@ -20,18 +20,16 @@ export default function HomePage() {
         <div className="tso-container relative grid items-center gap-8 py-14 md:grid-cols-[1.1fr_0.9fr] md:gap-12 md:py-28">
           <div>
             <h1 className="font-display text-[clamp(2.5rem,11vw,5rem)] leading-[1.05] tracking-wider2 text-cloud-cotton md:text-7xl">
-              creative
-              <br />
+              <span className="italic text-dark-brown md:text-pink-cherub">social</span>{" "}
               optimists.
               <br />
-              <span className="italic text-dark-brown md:text-pink-cherub">social</span>{" "}
+              <span className="italic text-dark-brown md:text-pink-cherub">creative</span>{" "}
               optimizers.
             </h1>
             <p className="mt-6 max-w-prose2 text-base text-dark-brown/80 sm:text-lg md:mt-8 md:text-cloud-cotton/90">
-              We&apos;re a creative agency with one goal: breaking sales goals
-              and driving ROI through social media exposure, SEO management,
-              and brand strategy. Gained exposure, increased brand love, and
-              an online obsession with your brand.
+              We are a creative marketing agency that helps businesses acquire
+              and connect with customers through active social media marketing
+              strategies.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 md:mt-10">
               <Link href="/contact" className="tso-btn-primary">Book a discovery call</Link>
