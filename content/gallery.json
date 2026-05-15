@@ -5,7 +5,8 @@
     "Med Spa",
     "Hospitality",
     "Live Events",
-    "CPG Brands"
+    "CPG Brands",
+    "UGC"
   ],
   "items": [
     {
@@ -38,42 +39,42 @@
     },
     {
       "section": "CPG Brands",
-      "clientType": "Q-Tips",
+      "clientType": "Q-tips",
       "contentType": "UGC",
       "platform": "Instagram",
       "src": "/videos/ugc-01.mp4"
     },
     {
-      "section": "Restaurants",
-      "clientType": "Local Brand",
+      "section": "CPG Brands",
+      "clientType": "Q-tips",
       "contentType": "UGC",
-      "platform": "TikTok",
+      "platform": "Instagram",
       "src": "/videos/ugc-02.mp4"
     },
     {
-      "section": "Restaurants",
-      "clientType": "Local Brand",
+      "section": "Wedding",
+      "clientType": "Rehearsal Dinner ",
       "contentType": "UGC",
-      "platform": "TikTok",
+      "platform": "Instagram",
       "src": "/videos/ugc-03.mp4"
     },
     {
-      "section": "Restaurants",
-      "clientType": "Local Brand",
+      "section": "Live Events",
+      "clientType": "Someone You Should Meet",
       "contentType": "UGC",
-      "platform": "TikTok",
+      "platform": "Instagram",
       "src": "/videos/ugc-04.mp4"
     },
     {
-      "section": "Restaurants",
-      "clientType": "Local Brand",
-      "contentType": "UGC",
+      "section": "UGC",
+      "clientType": "Personal",
+      "contentType": "Vlog Style Content",
       "platform": "TikTok",
       "src": "/videos/ugc-05.mp4"
     },
     {
-      "section": "Restaurants",
-      "clientType": "Local Brand",
+      "section": "Med Spa",
+      "clientType": "Skin Pharm",
       "contentType": "UGC",
       "platform": "TikTok",
       "src": "/videos/ugc-06.mp4"
