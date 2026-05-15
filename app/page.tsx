@@ -6,32 +6,43 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-pink-cherub">
+        {/* Desktop-only photo background */}
+        <img
+          src="/photos/hero-0I2A6770.jpg"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 hidden h-full w-full object-cover md:block"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-dark-brown/70 via-dark-brown/40 to-dark-brown/10 md:block"
+        />
         <div className="tso-container relative grid items-center gap-8 py-14 md:grid-cols-[1.1fr_0.9fr] md:gap-12 md:py-28">
           <div>
             <h1 className="font-display text-[clamp(2.5rem,11vw,5rem)] leading-[1.05] tracking-wider2 text-cloud-cotton md:text-7xl">
-              creative
-              <br />
+              <span className="italic text-dark-brown md:text-pink-cherub">social</span>{" "}
               optimists.
               <br />
-              <span className="italic text-dark-brown">social</span> optimizers.
+              <span className="italic text-dark-brown md:text-pink-cherub">creative</span>{" "}
+              optimizers.
             </h1>
-            <p className="mt-6 max-w-prose2 text-base text-dark-brown/80 sm:text-lg md:mt-8">
-              Social media strategy & management for profitable, growth-minded
-              brands. We trade algorithm anxiety for authentic growth — through
-              community, psychology, and a whole lot of creativity.
+            <p className="mt-6 max-w-prose2 text-base text-dark-brown/80 sm:text-lg md:mt-8 md:text-cloud-cotton/90">
+              We are a creative marketing agency that helps businesses acquire
+              and connect with customers through active social media marketing
+              strategies.
             </p>
             <div className="mt-8 flex flex-wrap gap-3 md:mt-10">
               <Link href="/contact" className="tso-btn-primary">Book a discovery call</Link>
               <Link href="/portfolio" className="tso-btn-secondary">See the work</Link>
             </div>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center md:hidden">
             <img
               src="/photos/megan-hero.jpg"
               alt="Megan Williams, founder of The Social Optimist"
               width={768}
               height={1024}
-              className="w-full max-w-[260px] rounded-3xl object-cover aspect-[3/4] shadow-stamp md:max-w-sm"
+              className="w-full max-w-[260px] rounded-3xl object-cover aspect-[3/4] shadow-stamp"
             />
           </div>
         </div>
@@ -41,21 +52,24 @@ export default function HomePage() {
       <section className="tso-container py-16 md:py-24">
         <div className="grid gap-10 md:grid-cols-[1fr_1fr] md:items-center md:gap-12">
           <div>
-            <p className="tso-eyebrow">what we believe</p>
+            <p className="tso-eyebrow">meet our founder</p>
             <h2 className="mt-3 font-display text-3xl leading-tight md:text-4xl">
-              Less time questioning. More time creating.
+              Meet Megan, our founder.
             </h2>
             <div className="mt-5 space-y-5 text-base text-dark-brown/80 sm:text-lg md:mt-6">
               <p>
-                Social media can be powerful when it&apos;s built on connection
-                instead of manipulation. We work with founders who want to grow
-                the right way — culturally aware, creatively brave, and rooted
-                in community.
+                She wants people to be just as obsessed with your brand as you
+                are. Social media has become repetitive — everyone chasing the
+                same trends, sounding the same. At The Social Optimist we
+                celebrate what makes your brand individual and help you find
+                your audience organically.
               </p>
               <p>
-                The optimist&apos;s edge: psychology, AI, and a trend-starter
-                mindset, pointed at the platforms your audience actually lives
-                on.
+                Trend chasers follow. We start the trends.
+              </p>
+              <p className="border-l-2 border-dark-brown/30 pl-4 text-base italic text-dark-brown/75">
+                <span className="font-display not-italic">Creative optimist</span>{" "}
+                <span className="not-italic text-dark-brown/55">(noun)</span> — someone who, rather than just expecting a good outcome, actively constructs it by viewing challenges as opportunities to design better solutions.
               </p>
             </div>
           </div>
@@ -72,7 +86,7 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES TEASER */}
-      <section className="bg-cloud-cotton-deep/40 py-24">
+      <section className="bg-cloud-cotton-deep/40 py-16 md:py-20">
         <div className="tso-container">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
@@ -89,7 +103,7 @@ export default function HomePage() {
             {[
               { name: "Social Starter", price: "$2,000", note: "12 posts · 2 platforms · community engagement" },
               { name: "Social Savvy", price: "$3,500", note: "20 posts · unlimited platforms · paid + SEO" },
-              { name: "Social Optimist", price: "$5,000", note: "Full creative team · content shoot included" },
+              { name: "Social Optimist", price: "$5,000", note: "Full creative suite · content shoot included" },
             ].map((t) => (
               <div key={t.name} className="tso-card flex flex-col">
                 <p className="tso-eyebrow">{t.name}</p>
@@ -103,7 +117,7 @@ export default function HomePage() {
 
       {/* CTA BAND */}
       <section className="bg-dark-brown text-cloud-cotton">
-        <div className="tso-container flex flex-col items-center gap-8 py-24 text-center">
+        <div className="tso-container flex flex-col items-center gap-8 py-16 text-center md:py-20">
           <MonogramBadge size={72} className="opacity-90" />
           <h2 className="font-display text-3xl tracking-wider2 md:text-4xl">
             Ready to feed the algorithm something it&apos;ll love?

@@ -21,7 +21,8 @@ const rows: Row[] = [
 ];
 
 const addOns = [
-  ["SEO & paid media", "Search and social ad campaigns aligned with your organic engine."],
+  ["SEO", "Organic search strategy and on-page work that compounds your reach over time."],
+  ["Paid media", "Search and social ad campaigns aligned with your organic engine."],
   ["UGC + influencer", "Local creators and aligned voices booked, briefed, and managed."],
   ["Content shoots", "Half-day or full-day shoots to feed 30–90 days of content."],
   ["Email marketing", "Lifecycle and broadcast campaigns that match your social voice."],
@@ -38,9 +39,9 @@ export default function ServicesPage() {
             Plans built for <span className="italic whitespace-nowrap">growth-minded</span> brands.
           </h1>
           <p className="mt-6 max-w-prose2 text-base text-dark-brown/75 sm:text-lg">
-            Three set tiers. No negotiation. We work with profitable brands who
-            value creative freedom and want to grow without burning out on
-            content.
+            Three set tiers. No negotiation. We work with growth-minded brands
+            ready to invest in their social, value creative freedom, and want
+            to grow without burning out on content.
           </p>
         </div>
       </section>
@@ -105,7 +106,7 @@ export default function ServicesPage() {
         <p className="mt-4 text-xs text-dark-brown/50 sm:hidden">Swipe to compare →</p>
       </section>
 
-      <section className="bg-cloud-cotton-deep/40 py-24">
+      <section className="bg-cloud-cotton-deep/40 py-16">
         <div className="tso-container">
           <p className="tso-eyebrow">add-ons</p>
           <h2 className="mt-3 font-display text-3xl md:text-4xl">When the strategy calls for more.</h2>
@@ -120,7 +121,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="tso-container py-24 text-center">
+      <section className="tso-container py-12 text-center md:py-16">
         <h2 className="font-display text-3xl md:text-4xl">Not sure which tier fits?</h2>
         <p className="mt-4 text-dark-brown/70">
           A 30-minute call usually answers it.

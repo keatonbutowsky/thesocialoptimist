@@ -13,16 +13,18 @@ export default function AboutPage() {
               Founded in Dallas by Megan Williams.
             </h1>
             <p className="mt-6 max-w-prose2 text-base text-dark-brown/80 sm:text-lg">
-              The Social Optimist was founded by Megan Williams to do social
-              media a different way. After years of watching brands lean into
-              fear, comparison, and copycat tactics, she wanted to build the
-              opposite — a creative shop that grows brands through community,
-              psychology, and a genuine belief that the internet can still be a
-              good place to be.
+              Megan has been a social media strategist for a decade — a
+              full-blown creative whose career spans content creation in
+              hospitality, restaurants, luxury brands, and wellness. She
+              founded The Social Optimist in Dallas to take her craft off the
+              ground and run it more efficiently for the businesses she works
+              with.
             </p>
             <p className="mt-4 max-w-prose2 text-base text-dark-brown/80 sm:text-lg">
-              Trend starter, not a trend chaser. Culturally aware, adaptable,
-              and obsessed with the craft of short-form content.
+              We work with growth-minded brands ready to go after their goals
+              and ready to invest in their social. Trend starter, not a trend
+              chaser. Culturally aware, adaptable, and obsessed with the craft
+              of short-form content.
             </p>
           </div>
           <div className="order-first md:order-last">
@@ -37,7 +39,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cloud-cotton-deep/40 py-24">
+      <section className="bg-cloud-cotton-deep/40 py-16 md:py-20">
         <div className="tso-container">
           <p className="tso-eyebrow">what we value</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -58,7 +60,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="tso-container py-24 text-center">
+      <section className="tso-container py-16 text-center">
         <h2 className="font-display text-3xl md:text-4xl">Think we&apos;d be a fit?</h2>
         <Link href="/contact" className="mt-8 inline-flex tso-btn-primary">
           Say hi

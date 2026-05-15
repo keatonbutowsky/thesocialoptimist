@@ -20,3 +20,15 @@ export type GalleryItem = {
 
 export const gallerySections = data.sections as readonly GallerySection[];
 export const gallery = data.items as GalleryItem[];
+
+export function slugifySection(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+export function findSectionBySlug(slug: string): GallerySection | undefined {
+  return gallerySections.find((s) => slugifySection(s) === slug);
+}

@@ -13,8 +13,8 @@ export default function ContactPage() {
             <p className="mt-6 max-w-prose2 text-base text-dark-brown/80 sm:text-lg">
               Fill out the form and we&apos;ll get back within two business days
               with availability for a 30-minute discovery call. We work best
-              with profitable, growth-minded brands ready to invest in their
-              social — if that&apos;s you, you&apos;ll feel it on the call.
+              with growth-minded brands ready to invest in their social — if
+              that&apos;s you, you&apos;ll feel it on the call.
             </p>
             <div className="mt-10 space-y-2 text-sm">
               <p className="tso-eyebrow">or reach us directly</p>
