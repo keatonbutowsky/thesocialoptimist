@@ -2,9 +2,9 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="mt-32 bg-dark-brown text-cloud-cotton">
-      <div className="tso-container py-16">
-        <div className="grid gap-12 md:grid-cols-3">
+    <footer className="mt-16 bg-dark-brown text-cloud-cotton">
+      <div className="tso-container py-10 md:py-12">
+        <div className="grid gap-8 md:grid-cols-3">
           <div>
             <img
               src="/brand/tso-logo.svg"
@@ -69,7 +69,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-cloud-cotton/15 pt-6 text-xs text-cloud-cotton/60 md:flex-row">
+        <div className="mt-8 flex flex-col items-start justify-between gap-4 border-t border-cloud-cotton/15 pt-6 text-xs text-cloud-cotton/60 md:flex-row">
           <p>© {new Date().getFullYear()} The Social Optimist · Megan Williams</p>
           <p className="italic">creative optimists. social optimizers.</p>
         </div>

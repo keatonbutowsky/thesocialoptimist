@@ -39,7 +39,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cloud-cotton-deep/40 py-24">
+      <section className="bg-cloud-cotton-deep/40 py-16 md:py-20">
         <div className="tso-container">
           <p className="tso-eyebrow">what we value</p>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -60,7 +60,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="tso-container py-24 text-center">
+      <section className="tso-container py-16 text-center">
         <h2 className="font-display text-3xl md:text-4xl">Think we&apos;d be a fit?</h2>
         <Link href="/contact" className="mt-8 inline-flex tso-btn-primary">
           Say hi

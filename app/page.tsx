@@ -6,6 +6,17 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-pink-cherub">
+        {/* Desktop-only photo background */}
+        <img
+          src="/photos/hero-0I2A6770.jpg"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 hidden h-full w-full object-cover md:block"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 hidden bg-gradient-to-r from-dark-brown/70 via-dark-brown/40 to-dark-brown/10 md:block"
+        />
         <div className="tso-container relative grid items-center gap-8 py-14 md:grid-cols-[1.1fr_0.9fr] md:gap-12 md:py-28">
           <div>
             <h1 className="font-display text-[clamp(2.5rem,11vw,5rem)] leading-[1.05] tracking-wider2 text-cloud-cotton md:text-7xl">
@@ -13,9 +24,10 @@ export default function HomePage() {
               <br />
               optimists.
               <br />
-              <span className="italic text-dark-brown">social</span> optimizers.
+              <span className="italic text-dark-brown md:text-pink-cherub">social</span>{" "}
+              optimizers.
             </h1>
-            <p className="mt-6 max-w-prose2 text-base text-dark-brown/80 sm:text-lg md:mt-8">
+            <p className="mt-6 max-w-prose2 text-base text-dark-brown/80 sm:text-lg md:mt-8 md:text-cloud-cotton/90">
               We&apos;re a creative agency with one goal: breaking sales goals
               and driving ROI through social media exposure, SEO management,
               and brand strategy. Gained exposure, increased brand love, and
@@ -26,13 +38,13 @@ export default function HomePage() {
               <Link href="/portfolio" className="tso-btn-secondary">See the work</Link>
             </div>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center md:hidden">
             <img
               src="/photos/megan-hero.jpg"
               alt="Megan Williams, founder of The Social Optimist"
               width={768}
               height={1024}
-              className="w-full max-w-[260px] rounded-3xl object-cover aspect-[3/4] shadow-stamp md:max-w-sm"
+              className="w-full max-w-[260px] rounded-3xl object-cover aspect-[3/4] shadow-stamp"
             />
           </div>
         </div>
@@ -76,7 +88,7 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES TEASER */}
-      <section className="bg-cloud-cotton-deep/40 py-24">
+      <section className="bg-cloud-cotton-deep/40 py-16 md:py-20">
         <div className="tso-container">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
@@ -107,7 +119,7 @@ export default function HomePage() {
 
       {/* CTA BAND */}
       <section className="bg-dark-brown text-cloud-cotton">
-        <div className="tso-container flex flex-col items-center gap-8 py-24 text-center">
+        <div className="tso-container flex flex-col items-center gap-8 py-16 text-center md:py-20">
           <MonogramBadge size={72} className="opacity-90" />
           <h2 className="font-display text-3xl tracking-wider2 md:text-4xl">
             Ready to feed the algorithm something it&apos;ll love?
