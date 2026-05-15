@@ -5,14 +5,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <title>TSO · Portfolio Editor</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23FAB6C4'/%3E%3C/svg%3E"
-    />
+    <link rel="icon" href="/brand/monogram-pink-stamp.svg" type="image/svg+xml" />
     <!-- Vercel strips trailing slashes, which breaks Decap's relative config.yml lookup. Pin it. -->
     <link rel="cms-config-url" type="text/yaml" href="/admin/config.yml" />
+
+    <!--
+      TSO brand styling for Decap CMS.
+      Selectors target Decap v3.12.2 (pinned below). Decap uses Emotion CSS-in-JS so
+      most class names are hashed (e.g. `css-1a2b3c`); we use attribute-pattern selectors,
+      stable wrapper hooks, and semantic HTML where possible. If we bump the Decap
+      version and chrome looks broken, the fix is usually 10-30 min of selector retargeting.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alice&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --tso-pink: #fab6c4;
+        --tso-pink-soft: #fde0e6;
+        --tso-cream: #fffde9;
+        --tso-cream-deep: #f5efc9;
+        --tso-brown: #2a2422;
+        --tso-brown-soft: rgba(42, 36, 34, 0.7);
+        --tso-brown-faint: rgba(42, 36, 34, 0.12);
+      }
+
+      html,
+      body,
+      #nc-root,
+      .css-15p2eyf-AppMainContainer,
+      [class*="AppMainContainer"] {
+        background-color: var(--tso-cream) !important;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif !important;
+        color: var(--tso-brown);
+      }
+
+      /* Headings + display type */
+      h1,
+      h2,
+      h3,
+      [class*="CardHeading"],
+      [class*="PageHeading"] {
+        font-family: "Alice", Georgia, serif !important;
+        color: var(--tso-brown);
+        letter-spacing: 0.01em;
+      }
+
+      /* Top bar (the chrome strip with logo + Save & Publish) */
+      [class*="TopBarContainer"],
+      [class*="MainTopBar"],
+      header[class*="TopBar"] {
+        background-color: var(--tso-cream) !important;
+        border-bottom: 1px solid var(--tso-pink) !important;
+        box-shadow: none !important;
+      }
+
+      /* Sidebar (collection list) */
+      [class*="SidebarContainer"],
+      [class*="Sidebar"] nav,
+      aside[class*="Sidebar"] {
+        background-color: var(--tso-cream) !important;
+        border-right: 1px solid var(--tso-brown-faint) !important;
+      }
+      [class*="SidebarNavLink"]:hover {
+        background-color: var(--tso-pink-soft) !important;
+        color: var(--tso-brown) !important;
+      }
+      [class*="SidebarNavLink"][class*="active"],
+      [class*="SidebarNavLink"][aria-current="page"] {
+        background-color: var(--tso-pink) !important;
+        color: var(--tso-brown) !important;
+        border-radius: 9999px !important;
+      }
+
+      /* Primary action buttons (Save / Publish / Save & Publish) */
+      button[class*="ToolbarButton"],
+      [class*="DropdownButton"],
+      button[type="submit"] {
+        background-color: var(--tso-brown) !important;
+        color: var(--tso-cream) !important;
+        border: none !important;
+        border-radius: 9999px !important;
+        font-family: "Inter", sans-serif !important;
+        font-weight: 600 !important;
+        text-transform: none !important;
+        letter-spacing: 0 !important;
+        padding: 0.6rem 1.1rem !important;
+        box-shadow: 0 1px 0 rgba(42, 36, 34, 0.08) !important;
+      }
+      button[class*="ToolbarButton"]:hover,
+      button[type="submit"]:hover {
+        background-color: #1c1816 !important;
+      }
+
+      /* Secondary / "Add" buttons */
+      button[class*="ListItemTopBar"],
+      button[class*="AddButton"],
+      button[class*="OutlineButton"] {
+        background-color: transparent !important;
+        color: var(--tso-brown) !important;
+        border: 1px solid var(--tso-brown-faint) !important;
+        border-radius: 9999px !important;
+      }
+      button[class*="ListItemTopBar"]:hover,
+      button[class*="AddButton"]:hover {
+        border-color: var(--tso-pink) !important;
+        background-color: var(--tso-pink-soft) !important;
+      }
+
+      /* Field labels */
+      label,
+      [class*="FieldLabel"],
+      [class*="ControlPaneFieldsList"] label > span {
+        font-family: "Inter", sans-serif !important;
+        font-size: 0.7rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.14em !important;
+        color: var(--tso-brown) !important;
+        font-weight: 600 !important;
+      }
+
+      /* Field hints */
+      [class*="FieldHint"],
+      [class*="ControlHint"] {
+        font-style: italic !important;
+        color: var(--tso-brown-soft) !important;
+        font-size: 0.8rem !important;
+      }
+
+      /* Cards / list items */
+      [class*="Card"],
+      [class*="StyledListItem"],
+      [class*="ListItem-"] {
+        background-color: white !important;
+        border-color: var(--tso-brown-faint) !important;
+        border-radius: 16px !important;
+        box-shadow: 0 1px 0 rgba(42, 36, 34, 0.04) !important;
+      }
+
+      /* Form inputs */
+      input[type="text"],
+      input[type="email"],
+      input[type="url"],
+      input[type="number"],
+      textarea,
+      select,
+      [class*="ObjectControl"] input,
+      [class*="StringControl"] input {
+        background-color: white !important;
+        border: 1px solid var(--tso-brown-faint) !important;
+        border-radius: 9999px !important;
+        padding: 0.6rem 1rem !important;
+        font-family: "Inter", sans-serif !important;
+        color: var(--tso-brown) !important;
+      }
+      textarea,
+      [class*="MarkdownControl"] {
+        border-radius: 16px !important;
+      }
+      input[type="text"]:focus,
+      textarea:focus,
+      select:focus {
+        outline: none !important;
+        border-color: var(--tso-pink) !important;
+        box-shadow: 0 0 0 3px var(--tso-pink-soft) !important;
+      }
+
+      /* The Decap logo slot in the top bar — make it taller and remove its filter */
+      [class*="AppHeaderSiteLink"] img,
+      [class*="SiteLink"] img,
+      a[href="/"] img,
+      [class*="LogoImage"] {
+        height: 36px !important;
+        width: auto !important;
+        max-width: 220px !important;
+        filter: none !important;
+      }
+
+      /* Login screen — DecapBridge serves part of this; we style what we own */
+      [class*="LoginButton"] {
+        background-color: var(--tso-brown) !important;
+        color: var(--tso-cream) !important;
+        border-radius: 9999px !important;
+        font-family: "Inter", sans-serif !important;
+        font-weight: 600 !important;
+      }
+    </style>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@3.12.2/dist/decap-cms.js"></script>
   </body>
 </html>
