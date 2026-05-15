@@ -25,14 +25,8 @@ export default function Nav() {
         >
           <img
             src="/brand/tso-logo.svg"
-            alt=""
-            aria-hidden="true"
-            className="hidden h-10 w-auto sm:block md:h-12"
-          />
-          <img
-            src="/brand/tso-wordmark.svg"
             alt="The Social Optimist"
-            className="h-9 w-auto md:h-11"
+            className="h-12 w-auto md:h-14"
           />
         </Link>
 
