@@ -1,7 +1,8 @@
 param(
-  [string]$Source = "C:\Users\keato\ClaudeProjects\TSO\UGC",
-  [string]$Dest   = "$PSScriptRoot\..\public\videos",
-  [string]$Ffmpeg = "C:\Users\keato\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.1.1-full_build\bin\ffmpeg.exe"
+  [string]$Source     = "C:\Users\keato\ClaudeProjects\TSO\UGC",
+  [string]$Dest       = "$PSScriptRoot\..\public\videos",
+  [string]$PosterDest = "$PSScriptRoot\..\public\posters",
+  [string]$Ffmpeg     = "C:\Users\keato\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-8.1.1-full_build\bin\ffmpeg.exe"
 )
 
 # Map of source filename -> output slug (no extension). Edit here if you add more.
@@ -19,17 +20,28 @@ $map = @{
 }
 
 New-Item -ItemType Directory -Force -Path $Dest | Out-Null
+New-Item -ItemType Directory -Force -Path $PosterDest | Out-Null
 
 foreach ($key in $map.Keys) {
-  $in  = Join-Path $Source $key
-  $out = Join-Path $Dest ($map[$key] + ".mp4")
+  $in     = Join-Path $Source $key
+  $out    = Join-Path $Dest ($map[$key] + ".mp4")
+  $poster = Join-Path $PosterDest ($map[$key] + ".jpg")
   if (-not (Test-Path $in)) { Write-Warning "missing: $in"; continue }
-  if (Test-Path $out) { Write-Host "skip (exists): $out"; continue }
-  Write-Host "transcoding -> $out"
-  & $Ffmpeg -hide_banner -loglevel error -y -i $in `
-    -c:v libx264 -preset medium -crf 22 -pix_fmt yuv420p `
-    -vf "scale='if(gt(iw,1080),1080,iw)':-2" `
-    -c:a aac -b:a 128k -movflags +faststart $out
+  if (Test-Path $out) {
+    Write-Host "skip (exists): $out"
+  } else {
+    Write-Host "transcoding -> $out"
+    & $Ffmpeg -hide_banner -loglevel error -y -i $in `
+      -c:v libx264 -preset medium -crf 22 -pix_fmt yuv420p `
+      -vf "scale='if(gt(iw,1080),1080,iw)':-2" `
+      -c:a aac -b:a 128k -movflags +faststart $out
+  }
+  if (Test-Path $poster) {
+    Write-Host "skip poster (exists): $poster"
+  } else {
+    Write-Host "poster -> $poster"
+    & $Ffmpeg -hide_banner -loglevel error -y -ss 0.5 -i $out -vframes 1 -q:v 3 $poster
+  }
 }
 
 Write-Host "done."

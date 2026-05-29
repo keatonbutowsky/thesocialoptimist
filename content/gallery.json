@@ -14,94 +14,80 @@
       "clientType": "Wedding",
       "contentType": "Teaser Content",
       "platform": "Instagram",
-      "src": "/videos/wedding-fall-in-love.mp4"
+      "src": "/videos/wedding-fall-in-love.mp4",
+      "poster": "/posters/wedding-fall-in-love.jpg"
     },
     {
       "section": "Live Events",
       "clientType": "Wedding",
       "contentType": "Recap Reel",
       "platform": "Instagram",
-      "src": "/videos/wedding-l-and-r.mp4"
+      "src": "/videos/wedding-l-and-r.mp4",
+      "poster": "/posters/wedding-l-and-r.jpg"
     },
     {
       "section": "Live Events",
       "clientType": "Wedding",
       "contentType": "Rehearsal Dinner",
       "platform": "Instagram",
-      "src": "/videos/wedding-rehearsal-dinner.mp4"
+      "src": "/videos/wedding-rehearsal-dinner.mp4",
+      "poster": "/posters/wedding-rehearsal-dinner.jpg"
     },
     {
       "section": "Live Events",
       "clientType": "Wedding",
       "contentType": "Bridal Party",
       "platform": "Instagram",
-      "src": "/videos/wedding-the-girls.mp4"
+      "src": "/videos/wedding-the-girls.mp4",
+      "poster": "/posters/wedding-the-girls.jpg"
     },
     {
       "section": "CPG Brands",
       "clientType": "Q-tips",
       "contentType": "UGC",
       "platform": "Instagram",
-      "src": "/videos/ugc-01.mp4"
+      "src": "/videos/ugc-01.mp4",
+      "poster": "/posters/ugc-01.jpg"
     },
     {
       "section": "CPG Brands",
       "clientType": "Q-tips",
       "contentType": "UGC",
       "platform": "Instagram",
-      "src": "/videos/ugc-02.mp4"
+      "src": "/videos/ugc-02.mp4",
+      "poster": "/posters/ugc-02.jpg"
     },
     {
       "section": "Wedding",
       "clientType": "Rehearsal Dinner ",
       "contentType": "UGC",
       "platform": "Instagram",
-      "src": "/videos/ugc-03.mp4"
+      "src": "/videos/ugc-03.mp4",
+      "poster": "/posters/ugc-03.jpg"
     },
     {
       "section": "Live Events",
       "clientType": "Someone You Should Meet",
       "contentType": "UGC",
       "platform": "Instagram",
-      "src": "/videos/ugc-04.mp4"
+      "src": "/videos/ugc-04.mp4",
+      "poster": "/posters/ugc-04.jpg"
     },
     {
       "section": "UGC",
       "clientType": "Personal",
       "contentType": "Vlog Style Content",
       "platform": "TikTok",
-      "src": "/videos/ugc-05.mp4"
+      "src": "/videos/ugc-05.mp4",
+      "poster": "/posters/ugc-05.jpg"
     },
     {
       "section": "Med Spa",
       "clientType": "Skin Pharm",
       "contentType": "UGC",
       "platform": "TikTok",
-      "src": "/videos/ugc-06.mp4"
-    },
-    {
-      "platform": "Instagram",
-      "aspect": "9:16",
-      "section": "Restaurants",
-      "clientType": "Cicis Pizza",
-      "contentType": "Reel ",
-      "src": "/videos/snapinsta.to_aqpthhmt6twpnx6glsoighft3uyiglfokudp4wkw5kmbi5wm_rhvgrsfmytfxly5615ttmkyphloy8z43nwzl99-ebwn0ymhadafpko.mp4"
-    },
-    {
-      "platform": "Instagram",
-      "aspect": "9:16",
-      "section": "Restaurants",
-      "clientType": "Freddy's Steakburger",
-      "contentType": "Reel ",
-      "src": "/videos/snapinsta.to_aqmeszefkgclgusjqdrembqpskcchrmkxwhi9satdu2vicxmzuxovxokmvy4gfvvlsrmmbre8ajomqdzcl5lfr14bc-faiwyecqnlvq-1-.mp4"
-    },
-    {
-      "platform": "Instagram",
-      "aspect": "9:16",
-      "section": "Restaurants",
-      "clientType": "Freddy's Steakburgers",
-      "contentType": "Reel",
-      "src": "/videos/snapinsta.to_aqn7t-bt4s6mih8mbphrycduntpu3-mtx0kfjmhqarbnlgy_sykoeih4yul68ikhg3u2m4g4tuwt80dclxnoyqtecwsudpiimofsrjc.mp4"
+      "src": "/videos/ugc-06.mp4",
+      "poster": "/posters/ugc-06.jpg"
     }
   ]
 }
