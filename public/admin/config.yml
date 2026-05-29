@@ -47,8 +47,17 @@ collections:
         label: Portfolio Videos
         name: gallery
         description: >-
-          Edit your portfolio here. Changes go live in about 30 seconds after
-          you click "Save & Publish".
+          HOW TO USE THIS PAGE — ADD a video: scroll down to "Videos", click
+          "Add video", fill in the labels, upload the .mp4 in the "Video file"
+          box, then click "Save & Publish" at the top right. EDIT a video:
+          click the row, change what you want, click "Save & Publish". DELETE
+          a video: click the row, scroll to the bottom of the form, click the
+          red trash/X icon on the row, then "Save & Publish". REORDER videos:
+          drag the rows up or down. CATEGORIES: each name in "Category pages"
+          becomes a page on the site at /portfolio/<name>. IMPORTANT — only
+          use this page. Do NOT use the "Media" sidebar to delete videos
+          (that deletes the file but leaves a broken card on the live site).
+          Changes go live in about 30 seconds after you click Save & Publish.
         fields:
           - name: sections
             label: Category pages
@@ -66,6 +75,10 @@ collections:
             label_singular: Video
             widget: list
             summary: "{{fields.clientType}} · {{fields.contentType}}  [{{fields.section}}]"
+            hint: >-
+              Click a row to edit. Drag rows to reorder. Use "Add video" below
+              to add a new one. To delete a video, open the row and use the X
+              icon on the row itself — don't delete the file from "Media".
             fields:
               - name: section
                 label: Which category page
