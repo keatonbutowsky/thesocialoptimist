@@ -6,6 +6,8 @@ type Cell =
   | { kind: "check"; lines?: string[] }
   | { kind: "reach" };
 
+type TierKey = "starter" | "savvy" | "optimist";
+
 type Row = {
   label: string;
   description: string;
@@ -13,6 +15,20 @@ type Row = {
   savvy: Cell;
   optimist: Cell;
 };
+
+type Tier = {
+  key: TierKey;
+  name: string;
+  shortName: string;
+  price: string;
+  highlight?: boolean;
+};
+
+const tiers: Tier[] = [
+  { key: "starter", name: "Social Starter", shortName: "Starter", price: "$2,000" },
+  { key: "savvy", name: "Social Savvy", shortName: "Savvy", price: "$3,500", highlight: true },
+  { key: "optimist", name: "Social Optimist", shortName: "Optimist", price: "$5,000" },
+];
 
 const rows: Row[] = [
   {
@@ -99,6 +115,31 @@ function CellContent({ cell }: { cell: Cell }) {
   );
 }
 
+function MobileRow({ row, tierKey }: { row: Row; tierKey: TierKey }) {
+  const cell = row[tierKey];
+  return (
+    <li className="flex flex-col gap-1.5 border-b border-dark-brown/10 pb-4 last:border-b-0 last:pb-0">
+      <p className="text-[11px] uppercase tracking-widest2 font-medium text-dark-brown">
+        {row.label}
+      </p>
+      {cell.kind === "reach" ? (
+        <p className="text-xs italic text-dark-brown/60">
+          Reach out for customized proposal
+        </p>
+      ) : (
+        <p className="flex items-baseline gap-2 text-sm text-dark-brown/80">
+          <span aria-label="Included" className="text-base leading-none text-dark-brown">
+            ✓
+          </span>
+          <span>
+            {cell.lines ? cell.lines.join(" · ") : "Included"}
+          </span>
+        </p>
+      )}
+    </li>
+  );
+}
+
 export default function ServicesPage() {
   return (
     <>
@@ -116,7 +157,54 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="tso-container pb-24">
+      {/* Mobile: stacked tier cards */}
+      <section className="tso-container pb-16 md:hidden">
+        <div className="space-y-6">
+          {tiers.map((tier) => (
+            <div
+              key={tier.key}
+              className={
+                "rounded-3xl border p-6 shadow-stamp " +
+                (tier.highlight
+                  ? "border-pink-cherub bg-pink-cherub/10"
+                  : "border-dark-brown/10 bg-cloud-cotton")
+              }
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="tso-eyebrow">{tier.name}</p>
+                  <p className="mt-2 font-display text-3xl leading-none">
+                    {tier.price}
+                    <span className="text-sm text-dark-brown/60">/mo</span>
+                  </p>
+                </div>
+                {tier.highlight && (
+                  <span className="inline-flex shrink-0 rounded-full bg-pink-cherub px-2.5 py-1 text-[10px] uppercase tracking-widest2 text-dark-brown">
+                    Most popular
+                  </span>
+                )}
+              </div>
+              <ul className="mt-6 space-y-4 border-t border-dark-brown/10 pt-6">
+                {rows.map((row) => (
+                  <MobileRow key={row.label} row={row} tierKey={tier.key} />
+                ))}
+              </ul>
+              <Link
+                href="/contact"
+                className={
+                  "mt-8 inline-flex w-full justify-center " +
+                  (tier.highlight ? "tso-btn-primary" : "tso-btn-secondary")
+                }
+              >
+                Start with {tier.shortName}
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Desktop: full comparison table */}
+      <section className="hidden tso-container pb-24 md:block">
         <div className="overflow-x-auto rounded-3xl border border-dark-brown/10 bg-cloud-cotton shadow-stamp">
           <table className="w-full min-w-[960px] border-collapse text-left">
             <thead>
