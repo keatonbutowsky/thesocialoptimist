@@ -102,8 +102,8 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               { name: "Social Starter", price: "$2,000", note: "12 posts · 2 platforms · community engagement" },
-              { name: "Social Savvy", price: "$3,500", note: "20 posts · unlimited platforms · paid + SEO" },
-              { name: "Social Optimist", price: "$5,000", note: "Full creative suite · content shoot included" },
+              { name: "Social Savvy", price: "$3,500", note: "20 posts · 4 platforms · paid social + SEO" },
+              { name: "Social Optimist", price: "$5,000", note: "30 posts · unlimited platforms · content shoot + UGC" },
             ].map((t) => (
               <div key={t.name} className="tso-card flex flex-col">
                 <p className="tso-eyebrow">{t.name}</p>

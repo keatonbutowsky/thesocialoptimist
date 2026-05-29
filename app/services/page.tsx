@@ -2,32 +2,102 @@ import Link from "next/link";
 
 export const metadata = { title: "Services" };
 
+type Cell =
+  | { kind: "check"; lines?: string[] }
+  | { kind: "reach" };
+
 type Row = {
   label: string;
-  starter: string;
-  savvy: string;
-  optimist: string;
+  description: string;
+  starter: Cell;
+  savvy: Cell;
+  optimist: Cell;
 };
 
 const rows: Row[] = [
-  { label: "Monthly investment", starter: "$2,000", savvy: "$3,500", optimist: "$5,000" },
-  { label: "Posts / month", starter: "12", savvy: "20", optimist: "20" },
-  { label: "Platforms", starter: "2", savvy: "Unlimited", optimist: "Unlimited" },
-  { label: "Community engagement", starter: "✓", savvy: "✓", optimist: "✓" },
-  { label: "Content shoot", starter: "Add-on", savvy: "Add-on", optimist: "Included" },
-  { label: "Paid social + SEO", starter: "—", savvy: "✓", optimist: "✓" },
-  { label: "Influencer + UGC partnerships", starter: "—", savvy: "—", optimist: "✓" },
-  { label: "Email / SMS marketing", starter: "—", savvy: "—", optimist: "Add-on" },
+  {
+    label: "Social Media Management",
+    description:
+      "Posting and managing your company's social media pages across platforms. Highlighting promotions, services, and anything you can dream up.",
+    starter: { kind: "check", lines: ["12 posts/mo", "2 platforms"] },
+    savvy: { kind: "check", lines: ["20 posts/mo", "4 platforms"] },
+    optimist: { kind: "check", lines: ["30 posts/mo", "Unlimited platforms"] },
+  },
+  {
+    label: "Community Engagement",
+    description:
+      "Monitor and respond to comments, direct messages, and mentions so your business stays an active member in its community.",
+    starter: { kind: "check" },
+    savvy: { kind: "check" },
+    optimist: { kind: "check" },
+  },
+  {
+    label: "Paid Social Ads",
+    description:
+      "Run targeted paid social campaigns to drive sales, promote events, and put your business in front of an engaged audience.",
+    starter: { kind: "reach" },
+    savvy: { kind: "check" },
+    optimist: { kind: "check" },
+  },
+  {
+    label: "SEO",
+    description:
+      "Optimize your online presence, so your business shows up effectively in the search process.",
+    starter: { kind: "reach" },
+    savvy: { kind: "check" },
+    optimist: { kind: "check" },
+  },
+  {
+    label: "Content Shoot",
+    description:
+      "Batch a month's worth of social content in a single shoot day! Handle everything from creative ideation, concept-ing, shooting, & editing.",
+    starter: { kind: "reach" },
+    savvy: { kind: "reach" },
+    optimist: { kind: "check" },
+  },
+  {
+    label: "Influencer + UGC",
+    description:
+      "Act as the liaison between your company and creators. Handling sourcing creators, pitching, negotiating contracts, and making sure their content is up to your standards.",
+    starter: { kind: "reach" },
+    savvy: { kind: "reach" },
+    optimist: { kind: "check" },
+  },
+  {
+    label: "Email + SMS Marketing",
+    description:
+      "Run email & SMS campaigns that align with your marketing goals. Whether it's a monthly newsletter, product drops, or new promos, your clientele will stay in the loop.",
+    starter: { kind: "reach" },
+    savvy: { kind: "reach" },
+    optimist: { kind: "reach" },
+  },
 ];
 
-const addOns = [
-  ["SEO", "Organic search strategy and on-page work that compounds your reach over time."],
-  ["Paid media", "Search and social ad campaigns aligned with your organic engine."],
-  ["UGC + influencer", "Local creators and aligned voices booked, briefed, and managed."],
-  ["Content shoots", "Half-day or full-day shoots to feed 30–90 days of content."],
-  ["Email marketing", "Lifecycle and broadcast campaigns that match your social voice."],
-  ["SMS marketing", "High-intent flows for launches, drops, and loyalty moments."],
-];
+function CellContent({ cell }: { cell: Cell }) {
+  if (cell.kind === "reach") {
+    return (
+      <span className="text-xs italic leading-snug text-dark-brown/60">
+        Reach out for customized proposal
+      </span>
+    );
+  }
+  return (
+    <div className="flex flex-col items-start gap-1">
+      <span aria-label="Included" className="text-lg leading-none text-dark-brown">
+        ✓
+      </span>
+      {cell.lines && (
+        <span className="text-xs leading-snug text-dark-brown/70">
+          {cell.lines.map((line, idx) => (
+            <span key={idx} className="block">
+              {line}
+            </span>
+          ))}
+        </span>
+      )}
+    </div>
+  );
+}
 
 export default function ServicesPage() {
   return (
@@ -48,23 +118,35 @@ export default function ServicesPage() {
 
       <section className="tso-container pb-24">
         <div className="overflow-x-auto rounded-3xl border border-dark-brown/10 bg-cloud-cotton shadow-stamp">
-          <table className="w-full min-w-[640px] border-collapse text-left">
+          <table className="w-full min-w-[960px] border-collapse text-left">
             <thead>
               <tr>
                 <th className="sticky left-0 z-10 bg-cloud-cotton px-6 py-6 align-bottom">
                   <span className="tso-eyebrow">compare plans</span>
                 </th>
                 <th className="px-6 py-6 align-bottom">
+                  <span className="tso-eyebrow">description</span>
+                </th>
+                <th className="px-6 py-6 align-bottom">
                   <p className="tso-eyebrow">Social Starter</p>
+                  <p className="mt-2 font-display text-2xl leading-none">
+                    $2,000<span className="text-sm text-dark-brown/60">/mo</span>
+                  </p>
                 </th>
                 <th className="bg-pink-cherub/30 px-6 py-6 align-bottom">
                   <p className="tso-eyebrow">Social Savvy</p>
+                  <p className="mt-2 font-display text-2xl leading-none">
+                    $3,500<span className="text-sm text-dark-brown/60">/mo</span>
+                  </p>
                   <span className="mt-2 inline-flex rounded-full bg-pink-cherub px-2.5 py-0.5 text-[10px] uppercase tracking-widest2 text-dark-brown">
                     Most popular
                   </span>
                 </th>
                 <th className="px-6 py-6 align-bottom">
                   <p className="tso-eyebrow">Social Optimist</p>
+                  <p className="mt-2 font-display text-2xl leading-none">
+                    $5,000<span className="text-sm text-dark-brown/60">/mo</span>
+                  </p>
                 </th>
               </tr>
             </thead>
@@ -74,16 +156,26 @@ export default function ServicesPage() {
                   key={r.label}
                   className={i % 2 === 0 ? "bg-cloud-cotton" : "bg-cloud-cotton-deep/30"}
                 >
-                  <td className="sticky left-0 z-10 bg-inherit px-6 py-4 text-sm font-medium text-dark-brown/80">
+                  <td className="sticky left-0 z-10 bg-inherit px-6 py-5 align-top text-sm font-medium uppercase tracking-widest2 text-dark-brown">
                     {r.label}
                   </td>
-                  <td className="px-6 py-4 text-sm">{r.starter}</td>
-                  <td className="bg-pink-cherub/20 px-6 py-4 text-sm font-medium">{r.savvy}</td>
-                  <td className="px-6 py-4 text-sm">{r.optimist}</td>
+                  <td className="max-w-xs px-6 py-5 align-top text-sm text-dark-brown/75">
+                    {r.description}
+                  </td>
+                  <td className="px-6 py-5 align-top text-sm">
+                    <CellContent cell={r.starter} />
+                  </td>
+                  <td className="bg-pink-cherub/20 px-6 py-5 align-top text-sm">
+                    <CellContent cell={r.savvy} />
+                  </td>
+                  <td className="px-6 py-5 align-top text-sm">
+                    <CellContent cell={r.optimist} />
+                  </td>
                 </tr>
               ))}
               <tr>
                 <td className="sticky left-0 z-10 bg-cloud-cotton px-6 py-6" />
+                <td className="px-6 py-6" />
                 <td className="px-6 py-6">
                   <Link href="/contact" className="tso-btn-secondary text-xs px-4 py-2">
                     Start with Starter
@@ -104,21 +196,6 @@ export default function ServicesPage() {
           </table>
         </div>
         <p className="mt-4 text-xs text-dark-brown/50 sm:hidden">Swipe to compare →</p>
-      </section>
-
-      <section className="bg-cloud-cotton-deep/40 py-16">
-        <div className="tso-container">
-          <p className="tso-eyebrow">add-ons</p>
-          <h2 className="mt-3 font-display text-3xl md:text-4xl">When the strategy calls for more.</h2>
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {addOns.map(([title, body]) => (
-              <li key={title} className="tso-card">
-                <h3 className="font-display text-xl">{title}</h3>
-                <p className="mt-3 text-sm text-dark-brown/70">{body}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
       </section>
 
       <section className="tso-container py-12 text-center md:py-16">
