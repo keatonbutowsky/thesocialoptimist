@@ -88,6 +88,14 @@
       "platform": "TikTok",
       "src": "/videos/ugc-06.mp4",
       "poster": "/posters/ugc-06.jpg"
+    },
+    {
+      "platform": "Instagram",
+      "aspect": "9:16",
+      "section": "Hospitality",
+      "clientType": "Kimpton",
+      "contentType": "Reel",
+      "src": "/videos/8f72c2bba1074bda8c6f2f8ff264dd00.mov"
     }
   ]
 }
