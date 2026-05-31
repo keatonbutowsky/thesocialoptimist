@@ -28,7 +28,8 @@ export default function Footer() {
           <div>
             <p className="tso-eyebrow text-cloud-cotton/60">Say hi</p>
             <ul className="mt-4 text-sm">
-              <li><a href="mailto:hello@thesocialoptimist.com" className="inline-flex min-h-[44px] items-center hover:text-pink-cherub">hello@thesocialoptimist.com</a></li>
+              <li><a href="tel:+19519709396" className="inline-flex min-h-[44px] items-center hover:text-pink-cherub">(951) 970-9396</a></li>
+              <li><a href="mailto:megan@thesocialoptimist.com" className="inline-flex min-h-[44px] items-center hover:text-pink-cherub">megan@thesocialoptimist.com</a></li>
               <li className="py-2">Dallas, TX</li>
             </ul>
             <div className="mt-4 flex items-center gap-4">

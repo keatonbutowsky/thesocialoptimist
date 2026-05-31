@@ -16,7 +16,7 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-dark-brown/5 bg-cloud-cotton/90 backdrop-blur">
-      <div className="tso-container flex h-16 items-center justify-between gap-3">
+      <div className="tso-container flex h-20 items-center justify-between gap-3 md:h-24">
         <Link
           href="/"
           onClick={close}
@@ -26,7 +26,7 @@ export default function Nav() {
           <img
             src="/brand/tso-logo.svg"
             alt="The Social Optimist"
-            className="h-12 w-auto md:h-14"
+            className="h-16 w-auto md:h-20"
           />
         </Link>
 

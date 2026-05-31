@@ -18,14 +18,15 @@ export default function ContactPage() {
             </p>
             <div className="mt-10 space-y-2 text-sm">
               <p className="tso-eyebrow">or reach us directly</p>
-              <p><a href="mailto:hello@thesocialoptimist.com" className="tso-link">hello@thesocialoptimist.com</a></p>
+              <p><a href="tel:+19519709396" className="tso-link">(951) 970-9396</a></p>
+              <p><a href="mailto:megan@thesocialoptimist.com" className="tso-link">megan@thesocialoptimist.com</a></p>
               <p>Dallas, TX</p>
             </div>
           </div>
 
           <form
             className="rounded-3xl border border-dark-brown/10 bg-cloud-cotton p-8 shadow-stamp"
-            action="mailto:hello@thesocialoptimist.com"
+            action="mailto:megan@thesocialoptimist.com"
             method="post"
             encType="text/plain"
           >
