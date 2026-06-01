@@ -150,9 +150,11 @@ export default function ServicesPage() {
             Plans built for <span className="italic whitespace-nowrap">growth-minded</span> brands.
           </h1>
           <p className="mt-6 max-w-prose2 text-base text-dark-brown/75 sm:text-lg">
-            Three set tiers. No negotiation. We work with growth-minded brands
-            ready to invest in their social, value creative freedom, and want
-            to grow without burning out on content.
+            Three set tiers, with custom packaging available. We take the time
+            to understand your needs and work with your situation to build a
+            realistic game plan. We partner with growth-minded brands ready to
+            invest in their social, value creative freedom, and want to grow
+            without burning out on content.
           </p>
         </div>
       </section>
